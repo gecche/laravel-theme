@@ -155,8 +155,8 @@ class Themes{
      * @param  string $href
      * @return string
      */
-	public function css($href){
-		return '<link media="all" type="text/css" rel="stylesheet" href="'.$this->url($href).'">';
+    public function css($href, $getString = ''){
+        return '<link media="all" type="text/css" rel="stylesheet" href="'.$this->url($href).$getString.'">';
 	}
 
     /**
@@ -165,8 +165,8 @@ class Themes{
      * @param  string $href
      * @return string
      */
-	public function js($href){
-		return '<script src="'.$this->url($href).'"></script>';
+    public function js($href, $getString = ''){
+        return '<script src="'.$this->url($href).$getString.'"></script>';
 	}
 
     /**
@@ -177,7 +177,7 @@ class Themes{
      * @param  string $Class
      * @return string
      */
-	public function img($src, $alt='', $Class=''){
-		return '<img src="'.$this->url($src).'" alt="'.$alt.'" class="'.$Class.'">';
+	public function img($src, $alt='', $Class='', $getString = ''){
+		return '<img src="'.$this->url($src).$getString.'" alt="'.$alt.'" class="'.$Class.'">';
 	}
 }
