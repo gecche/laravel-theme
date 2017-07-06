@@ -132,7 +132,7 @@ class Themes{
      * @param  string $url
      * @return string
      */
-	public function url($url){
+	public function url($url, $getString = ''){
 		if (Config::get('themes.enabled', true)){
 
             // Check for valid {xxx} keys and replace them with the Theme's configuration value (in themes.php)
@@ -141,10 +141,10 @@ class Themes{
                 if(($value=$this->config($param)) !== null)
                     $url = str_replace('{'.$param.'}', $value, $url);
 
-			return $this->activeTheme->url($url);
+			return $this->activeTheme->url($url).$getString;
         }
 		else
-			return $url;
+			return $url.$getString;
 	}
 
 	//---------------- Helper Functions (for Blade files) -------------------------
@@ -156,7 +156,7 @@ class Themes{
      * @return string
      */
     public function css($href, $getString = ''){
-        return '<link media="all" type="text/css" rel="stylesheet" href="'.$this->url($href).$getString.'">';
+        return '<link media="all" type="text/css" rel="stylesheet" href="'.$this->url($href, $getString).'">';
 	}
 
     /**
@@ -166,7 +166,7 @@ class Themes{
      * @return string
      */
     public function js($href, $getString = ''){
-        return '<script src="'.$this->url($href).$getString.'"></script>';
+        return '<script src="'.$this->url($href, $getString).'"></script>';
 	}
 
     /**
@@ -178,6 +178,6 @@ class Themes{
      * @return string
      */
 	public function img($src, $alt='', $Class='', $getString = ''){
-		return '<img src="'.$this->url($src).$getString.'" alt="'.$alt.'" class="'.$Class.'">';
+		return '<img src="'.$this->url($src, $getString).'" alt="'.$alt.'" class="'.$Class.'">';
 	}
 }
