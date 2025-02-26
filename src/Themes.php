@@ -374,8 +374,6 @@ class Themes
             $class,
             $this->HtmlAttributes($attributes)
         );
-//    public function img($src, $alt='', $Class='', $attributes=array(), $getString = ''){
-//        return '<img src="'.$this->url($src).$getString.'" alt="'.$alt.'" class="'.$Class.'" '.$this->HtmlAttributes($attributes).'>';
     }
 
     /**
