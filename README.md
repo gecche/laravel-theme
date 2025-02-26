@@ -1,5 +1,4 @@
 ## Description
-[![Laravel](https://img.shields.io/badge/Laravel-5.x-orange.svg?style=flat-square)](http://laravel.com)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 [![Downloads](https://img.shields.io/packagist/dt/igaster/laravel-theme.svg?style=flat-square)](https://packagist.org/packages/igaster/laravel-theme)
 
@@ -27,4 +26,6 @@ v2.x requires Laravel 5.4+
 - For Laravel 5.0 & 5.1, please use the [v1.0.x branch](https://github.com/igaster/laravel-theme/tree/v1.0)
 - For Laravel 5.2 & 5.3, please use the [v1.1.x branch](https://github.com/igaster/laravel-theme/tree/v1.1)
 
+## Tests
 
+This package is fully tested. Check the [testing repository](https://github.com/igaster/laravel-theme-tests)
